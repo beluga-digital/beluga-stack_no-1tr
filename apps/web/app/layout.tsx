@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <html className="scroll-smooth w-full" lang="en">
       <body
@@ -44,4 +44,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

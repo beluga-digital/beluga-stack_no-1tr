@@ -1,11 +1,11 @@
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 
-interface MainLayoutProps {
+const MainLayout = ({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-function MainLayout({ children }: MainLayoutProps): React.ReactElement {
+}): JSX.Element => {
   return (
     <>
       <Header />
@@ -13,6 +13,6 @@ function MainLayout({ children }: MainLayoutProps): React.ReactElement {
       <Footer />
     </>
   );
-}
+};
 
 export default MainLayout;

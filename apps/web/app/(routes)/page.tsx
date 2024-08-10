@@ -16,11 +16,11 @@ import { TbExternalLink, TbFileCode } from "react-icons/tb";
 import { metaTitleGenerator } from "../../utils/metaTitleGenerator";
 
 export const metadata: Metadata = {
-  title: metaTitleGenerator("beluga stack no.1"),
+  title: metaTitleGenerator("beluga stack no.1 turborepo"),
   description: "",
 };
 
-function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   return (
     <>
       <Container>
@@ -37,7 +37,7 @@ function Home(): JSX.Element {
             width={900}
           />
           <Heading className="text-primary" level={1} size="xl">
-            beluga stack – <span className="font-bold">no.1</span>
+            beluga stack – <span className="font-bold">no.1 turborepo</span>
           </Heading>
         </ContainerContent>
       </Container>
@@ -48,7 +48,42 @@ function Home(): JSX.Element {
           </Paragraph>
         </ContainerContent>
         <ContainerContent className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-start">
-          <Card className="border-primary">
+          <Card>
+            <CardHeader>
+              <CardTitle level={3}>Turborepo</CardTitle>
+              <CardDescription>a monorepo solution</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Paragraph>
+                Turborepo is a high-performance build system for JavaScript and
+                TypeScript codebases. It is designed for scaling monorepos and
+                also makes workflows in single-package workspaces faster, too.
+              </Paragraph>
+            </CardContent>
+            <CardFooter>
+              <Button asChild>
+                <a
+                  href="https://turbo.build/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <TbExternalLink className="w-4 h-4" />
+                  Visit
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a
+                  href="https://turbo.build/repo/docs"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <TbFileCode className="w-4 h-4" />
+                  Docs
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+          <Card>
             <CardHeader>
               <CardTitle level={3}>NextJS 14</CardTitle>
               <CardDescription>
@@ -64,13 +99,21 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://nextjs.org/" target="_blank">
+                <a
+                  href="https://nextjs.org/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://nextjs.org/docs" target="_blank">
+                <a
+                  href="https://nextjs.org/docs"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbFileCode className="w-4 h-4" />
                   Docs
                 </a>
@@ -90,13 +133,21 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://www.postgresql.org/" target="_blank">
+                <a
+                  href="https://www.postgresql.org/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://hub.docker.com/_/postgres" target="_blank">
+                <a
+                  href="https://hub.docker.com/_/postgres"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbFileCode className="w-4 h-4" />
                   Docker Docs
                 </a>
@@ -115,7 +166,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://www.prisma.io/" target="_blank">
+                <a
+                  href="https://www.prisma.io/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -124,6 +179,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://www.prisma.io/docs/getting-started"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -146,7 +202,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://tanstack.com/query/latest" target="_blank">
+                <a
+                  href="https://tanstack.com/query/latest"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -155,6 +215,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://tanstack.com/query/latest/docs/framework/react/overview"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -180,7 +241,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://next-safe-action.dev/" target="_blank">
+                <a
+                  href="https://next-safe-action.dev/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -189,6 +254,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://next-safe-action.dev/docs/introduction"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -211,13 +277,21 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://lucia-auth.com/" target="_blank">
+                <a
+                  href="https://lucia-auth.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://lucia-auth.com/" target="_blank">
+                <a
+                  href="https://lucia-auth.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbFileCode className="w-4 h-4" />
                   Docs
                 </a>
@@ -238,7 +312,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://tailwindcss.com/" target="_blank">
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -247,6 +325,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://tailwindcss.com/docs/installation"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -267,13 +346,21 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://ui.shadcn.com/" target="_blank">
+                <a
+                  href="https://ui.shadcn.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://ui.shadcn.com/docs" target="_blank">
+                <a
+                  href="https://ui.shadcn.com/docs"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbFileCode className="w-4 h-4" />
                   Docs
                 </a>
@@ -296,13 +383,21 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://zod.dev/" target="_blank">
+                <a
+                  href="https://zod.dev/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://zod.dev/" target="_blank">
+                <a
+                  href="https://zod.dev/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbFileCode className="w-4 h-4" />
                   Docs
                 </a>
@@ -324,7 +419,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://react-hook-form.com/" target="_blank">
+                <a
+                  href="https://react-hook-form.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -333,6 +432,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://react-hook-form.com/get-started"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -352,7 +452,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://react-hook-form.com/" target="_blank">
+                <a
+                  href="https://react-hook-form.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -361,6 +465,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://react-hook-form.com/get-started"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -385,6 +490,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://react-icons.github.io/react-icons/"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
@@ -394,6 +500,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://react-icons.github.io/react-icons/"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -417,7 +524,11 @@ function Home(): JSX.Element {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href="https://fontsource.org/" target="_blank">
+                <a
+                  href="https://fontsource.org/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <TbExternalLink className="w-4 h-4" />
                   Visit
                 </a>
@@ -426,6 +537,7 @@ function Home(): JSX.Element {
                 <a
                   href="https://fontsource.org/docs/getting-started/introduction"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <TbFileCode className="w-4 h-4" />
                   Docs
@@ -437,6 +549,6 @@ function Home(): JSX.Element {
       </Container>
     </>
   );
-}
+};
 
 export default Home;
