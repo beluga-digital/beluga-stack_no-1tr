@@ -9,8 +9,7 @@
   ],
   "exports": {
     "./globals.css": "./dist/index.css",
-    "./components/*": "./src/components/*",
-    "./utils/*": "./src/utils/*"
+    "./components/*": "./src/components/*"
   },
   "license": "MIT",
   "scripts": {
@@ -26,6 +25,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/utils": "workspace:*",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.14",
     "@types/react": "^18.2.61",
@@ -38,7 +38,12 @@
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.0",
     "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "lucide-react": "^0.343.0",
     "next-themes": "^0.2.1",
     "react-icons": "^5.0.1"
   }

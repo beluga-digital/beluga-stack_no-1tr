@@ -16,6 +16,7 @@
     "@lucia-auth/adapter-prisma": "^4.0.1",
     "@prisma/client": "^5.18.0",
     "@repo/ui": "workspace:*",
+    "@repo/utils": "workspace:*",
     "@tanstack/react-query": "^5.51.23",
     "@tanstack/react-query-devtools": "^5.51.23",
     "class-variance-authority": "^0.7.0",

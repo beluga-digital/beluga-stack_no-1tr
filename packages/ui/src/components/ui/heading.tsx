@@ -1,7 +1,8 @@
 import { Slot } from "@radix-ui/react-slot";
-import { cn } from "@repo/ui/utils/cn";
-import { VariantProps, cva } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import * as React from "react";
+import { cn } from "@repo/utils";
 
 const headingVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
   variants: {
