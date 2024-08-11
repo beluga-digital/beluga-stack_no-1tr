@@ -1,6 +1,6 @@
 "use client";
 
-import { Toaster } from "@repo/ui/components/ui/toaster";
+import { Toaster } from "@repo/ui";
 
 const ToasterContext = () => {
   return <Toaster />;

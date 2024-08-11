@@ -1,4 +1,4 @@
-import { Container, ContainerContent } from "@repo/ui/components/ui/container";
+import { Container, ContainerContent } from "@repo/ui";
 
 const Header: React.FC = () => {
   return (
