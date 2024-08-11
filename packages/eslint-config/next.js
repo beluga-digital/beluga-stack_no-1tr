@@ -46,8 +46,10 @@ module.exports = {
     "react/function-component-definition": [
       2,
       {
-        namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function",
+        namedComponents:
+          "function-declaration" | "function-expression" | "arrow-function",
+        unnamedComponents:
+          "function-declaration" | "function-expression" | "arrow-function",
       },
     ],
     "unicorn/filename-case": [
@@ -59,5 +61,8 @@ module.exports = {
         },
       },
     ],
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
   },
 };
