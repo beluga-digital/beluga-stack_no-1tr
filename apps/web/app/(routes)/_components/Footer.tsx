@@ -1,5 +1,5 @@
-import { Container, ContainerContent } from "@repo/ui/components/ui/container";
-import { Paragraph } from "@repo/ui/components/ui/paragraph";
+import { Container, ContainerContent } from "@repo/ui";
+import { Paragraph } from "@repo/ui";
 
 const Footer = (): JSX.Element => {
   return (

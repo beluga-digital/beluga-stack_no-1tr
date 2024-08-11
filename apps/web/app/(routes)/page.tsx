@@ -1,4 +1,4 @@
-import { Button } from "@repo/ui/components/ui/button";
+import { Button } from "@repo/ui";
 import {
   Card,
   CardContent,
@@ -6,10 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@repo/ui/components/ui/card";
-import { Container, ContainerContent } from "@repo/ui/components/ui/container";
-import { Heading } from "@repo/ui/components/ui/heading";
-import { Paragraph } from "@repo/ui/components/ui/paragraph";
+} from "@repo/ui";
+import { Container, ContainerContent } from "@repo/ui";
+import { Heading } from "@repo/ui";
+import { Paragraph } from "@repo/ui";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { TbExternalLink, TbFileCode } from "react-icons/tb";

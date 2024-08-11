@@ -2,7 +2,6 @@ import "@fontsource-variable/inter";
 import "@fontsource/geist-mono/400.css";
 import "@fontsource/geist-mono/700.css";
 import "@fontsource/krona-one";
-import "@repo/ui/globals.css";
 import type { Metadata } from "next";
 import QueryProvider from "../context/QueryProvider";
 import ThemeProvider from "../context/ThemeProvider";
