@@ -13,10 +13,10 @@ import { Paragraph } from "@repo/ui";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { TbExternalLink, TbFileCode } from "react-icons/tb";
-import { metaTitleGenerator } from "../../utils/metaTitleGenerator";
+import { metaTitleGenerator } from "@repo/utils";
 
 export const metadata: Metadata = {
-  title: metaTitleGenerator("beluga stack no.1 turborepo"),
+  title: metaTitleGenerator(["Home"]),
   description: "",
 };
 
