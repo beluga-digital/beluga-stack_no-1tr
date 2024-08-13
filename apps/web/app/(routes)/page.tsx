@@ -36,8 +36,9 @@ const Home = (): JSX.Element => {
             src="/beluga_logo_signet.svg"
             width={900}
           />
-          <Heading className="text-primary" level={1} size="xl">
-            beluga stack – <span className="font-bold">no.1 turborepo</span>
+          <Heading className="text-primary" level={1} size="xl" align="center">
+            {process.env.HELLO}, beluga stack –{" "}
+            <span className="font-bold">no.1 turborepo</span>
           </Heading>
         </ContainerContent>
       </Container>
