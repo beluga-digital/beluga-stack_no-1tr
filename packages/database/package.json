@@ -9,15 +9,17 @@
     "db:migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:seed": "tsx src/seed.ts",
-    "dev": "tsup src/* --watch",
+    "dotenvx": "dotenvx",
+    "dev": "dotenvx run -- tsup src/* --watch",
     "format": "prisma format",
     "generate": "prisma generate",
     "lint": "eslint . --max-warnings 0",
-    "prebuild": "pnpm run generate",
+    "prebuild": "dotenvx run -- pnpm run generate",
     "predev": "pnpm run generate",
     "studio": "prisma studio"
   },
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.7.0",
     "@prisma/client": "^5.10.2",
     "@types/node": "^22.2.0"
   },
