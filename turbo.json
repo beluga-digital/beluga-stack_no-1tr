@@ -4,13 +4,21 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "env": ["HELLO", "DATABASE_URL"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": ["HELLO", "DATABASE_URL"]
     },
     "lint": {},
     "type-check": {},
-    "dev": {
-      "cache": false,
-      "persistent": true
+    "db:migrate:deploy": {},
+    "db:push": {},
+    "db:seed": {},
+    "generate": {
+      "dependsOn": ["^generate"]
     },
     "clean": {
       "cache": false
