@@ -5,11 +5,7 @@ const meta: Meta<typeof Button> = {
   title: "Button",
   component: Button,
   argTypes: {},
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
-  },
+  parameters: {},
   args: {
     children: "Button",
   },

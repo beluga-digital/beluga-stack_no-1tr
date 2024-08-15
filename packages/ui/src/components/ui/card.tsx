@@ -36,8 +36,10 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ className, ...props }, ref) => {
     return (
       <Heading
-        className={cn("font-semibold leading-none tracking-tight", className)}
+        className={cn("leading-none tracking-tight", className)}
         ref={ref}
+        size="base"
+        weight="semibold"
         {...props}
       />
     );

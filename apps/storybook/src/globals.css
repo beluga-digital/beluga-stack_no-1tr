@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  body,
+  .docs-story {
     @apply bg-white dark:bg-slate-950 antialiased min-w-full min-h-full;
   }
 }
