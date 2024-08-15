@@ -1,5 +1,10 @@
+import "@fontsource-variable/inter";
+import "@fontsource/geist-mono/400.css";
+import "@fontsource/geist-mono/700.css";
+import "@fontsource/krona-one";
 import "../../../packages/ui/dist/styles/globals.css";
 import "../src/globals.css";
+
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 
 export const decorators = [
@@ -34,6 +39,7 @@ const preview = {
       },
     },
   },
+  tags: ["autodocs"],
 };
 
 export default preview;
