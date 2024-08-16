@@ -11,18 +11,18 @@ function getAbsolutePath(value) {
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: [
-    {
-      directory: "../../../packages/ui/src/**",
-      titlePrefix: "UI",
-      files: "*.stories.*",
-    },
+    "../../../packages/ui/src/**/*.mdx",
+    "../../../packages/ui/src/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
-    "@storybook/addon-themes"
+    getAbsolutePath("@storybook/addon-themes"),
+    getAbsolutePath("@storybook/addon-docs"),
+    getAbsolutePath("@geometricpanda/storybook-addon-badges"),
+    getAbsolutePath("@storybook/addon-storysource"),
   ],
   framework: {
     name: "@storybook/react-vite",

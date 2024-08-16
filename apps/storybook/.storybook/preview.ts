@@ -6,6 +6,7 @@ import "../../../packages/ui/dist/styles/globals.css";
 import "../src/globals.css";
 
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
+import { BADGE, BadgesConfig } from "@geometricpanda/storybook-addon-badges";
 
 export const decorators = [
   withThemeByDataAttribute({

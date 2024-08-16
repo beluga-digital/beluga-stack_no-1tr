@@ -1,29 +1,14 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
-import { Heading } from "./heading";
+import { Paragraph } from "./paragraph";
 
-const meta: Meta<typeof Heading> = {
-  title: "UI/01_Text/Heading",
-  component: Heading,
+const meta: Meta<typeof Paragraph> = {
+  title: "UI/01_Text/Paragraph",
+  component: Paragraph,
   parameters: {
     badges: [BADGE.STABLE],
   },
   argTypes: {
-    level: {
-      description: "The h-level (h1-h6) for this heading.",
-      control: {
-        type: "select",
-        labels: {
-          1: "[1] – h1",
-          2: "[2] – h2",
-          3: "[3] – h3",
-          4: "[4] – h4",
-          5: "[5] – h5",
-          6: "[6] – h6 ",
-        },
-      },
-      options: [1, 2, 3, 4, 5, 6],
-    },
     size: {
       description: "The font-size for this heading.",
       control: {
@@ -95,12 +80,12 @@ const meta: Meta<typeof Heading> = {
     },
   },
   args: {
-    level: 2,
-    size: "lg",
+    size: "base",
     align: "left",
-    weight: "semibold",
-    font: "mono",
-    children: "The quick, brown fox jumps over a lazy dog.",
+    weight: "normal",
+    font: "sans",
+    children:
+      "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack.",
     className: "",
     asChild: false,
   },
@@ -108,38 +93,20 @@ const meta: Meta<typeof Heading> = {
 
 export default meta;
 
-const Template: StoryFn<typeof Heading> = (args: any) => <Heading {...args} />;
+const Template: StoryFn<typeof Paragraph> = (args: any) => (
+  <Paragraph {...args} />
+);
 
-export const Default: StoryFn<typeof Heading> = Template.bind({});
+export const Default: StoryFn<typeof Paragraph> = Template.bind({});
 Default.args = {};
 
-export const Page: StoryFn<typeof Heading> = Template.bind({});
-Page.args = {
-  size: "xl",
-  align: "center",
-  className: "text-primary dark:text-primary",
+export const Prologue: StoryFn<typeof Paragraph> = Template.bind({});
+Prologue.args = {
+  size: "lg",
+  weight: "medium",
 };
 
-export const Hero: StoryFn<typeof Heading> = Template.bind({});
-Hero.args = {
-  size: "2xl",
-  weight: "normal",
-  font: "serif",
-  className: "text-primary dark:text-primary",
-};
-Hero.parameters = {
-  layout: "fullscreen",
-  badges: [BADGE.EXPERIMENTAL],
-};
-Hero.decorators = [
-  (Hero) => (
-    <div className="min-h-screen flex items-center bg-gradient-to-br from-white to-primary-200 dark:bg-primary-700 p-16">
-      <Hero />
-    </div>
-  ),
-];
-
-export const Card: StoryFn<typeof Heading> = Template.bind({});
-Card.args = {
-  size: "base",
+export const Small: StoryFn<typeof Paragraph> = Template.bind({});
+Small.args = {
+  size: "xs",
 };

@@ -43,7 +43,7 @@ const headingVariants = cva("text-slate-700 dark:text-slate-50", {
   defaultVariants: {
     size: "lg",
     align: "left",
-    weight: "normal",
+    weight: "semibold",
     font: "mono",
   },
 });

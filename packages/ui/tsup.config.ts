@@ -1,7 +1,7 @@
 import { defineConfig, Options, BuildOptions } from "tsup";
 
 export default defineConfig((options: Options) => ({
-  entry: ["src/**/*.tsx", "src/"],
+  entry: ["src/**/*.tsx"],
   format: ["esm"],
   esbuildOptions(options: BuildOptions) {
     options.banner = {
