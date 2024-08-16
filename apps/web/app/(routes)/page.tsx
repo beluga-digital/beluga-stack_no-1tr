@@ -37,8 +37,11 @@ const Home = (): JSX.Element => {
             width={900}
           />
           <Heading className="text-primary" level={1} size="xl" align="center">
-            {process.env.HELLO}, beluga stack –{" "}
-            <span className="font-bold">no.1 turborepo</span>
+            <span className="font-extrabold font-sans uppercase text-base">
+              {process.env.HELLO}
+            </span>
+            <br />
+            beluga stack – no.1 turborepo
           </Heading>
         </ContainerContent>
       </Container>
