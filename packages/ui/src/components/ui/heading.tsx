@@ -65,7 +65,8 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
     return (
       <Comp
         className={cn(
-          headingVariants({ size, align, weight, font, className })
+          headingVariants({ size, align, weight, font }),
+          className
         )}
         ref={ref}
         {...props}

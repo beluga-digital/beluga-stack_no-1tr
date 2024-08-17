@@ -1,6 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
+import { useChannel } from "@storybook/preview-api";
+import { HIGHLIGHT } from "@storybook/addon-highlight";
 import { Container, ContainerContent } from "./container";
+import { Paragraph } from "./paragraph";
 
 const meta: Meta<typeof ContainerContent> = {
   title: "UI/04_Layout/ContainerContent",
@@ -86,21 +89,51 @@ const meta: Meta<typeof ContainerContent> = {
     },
   },
   args: {
-    spacingTop: "lg",
-    align: "start",
-    justify: "center",
-    children: <ContainerContent>Test</ContainerContent>,
+    area: "large",
+    maxWidth: false,
+    children: (
+      <Paragraph align="center" className="p-2" font="mono" size="sm">
+        ContainerContent component is only to be used in conjunction with
+        Container.
+      </Paragraph>
+    ),
     asChild: false,
   },
+  decorators: [
+    (storyFn) => {
+      const emit = useChannel({});
+      emit(HIGHLIGHT, {
+        elements: [".container", ".container__content"],
+      });
+      return storyFn();
+    },
+  ],
 };
 
 export default meta;
 
 const Template: StoryFn<typeof ContainerContent> = (args: any) => (
-  <Container spacing="lg">
+  <Container spacing="xl">
     <ContainerContent {...args} />
   </Container>
 );
 
 export const Default: StoryFn<typeof ContainerContent> = Template.bind({});
 Default.args = {};
+
+export const Small: StoryFn<typeof ContainerContent> = Template.bind({});
+Small.args = {
+  area: "small",
+};
+
+export const Page: StoryFn<typeof ContainerContent> = Template.bind({});
+Page.args = {
+  area: "page",
+};
+
+export const SmallPage: StoryFn<typeof ContainerContent> = Template.bind({});
+SmallPage.args = {
+  area: false,
+  areaStart: "small",
+  areaEnd: "page",
+};

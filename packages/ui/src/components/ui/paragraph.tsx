@@ -63,7 +63,8 @@ const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
     return (
       <Comp
         className={cn(
-          paragraphVariants({ size, align, weight, font, className })
+          paragraphVariants({ size, align, weight, font }),
+          className
         )}
         ref={ref}
         {...props}
