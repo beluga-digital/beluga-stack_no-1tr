@@ -1,11 +1,13 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
+import { useChannel } from "@storybook/preview-api";
+import { HIGHLIGHT } from "@storybook/addon-highlight";
 import { Container, ContainerContent } from "./container";
+import { Paragraph } from "./paragraph";
 
 const meta: Meta<typeof Container> = {
   title: "UI/04_Layout/Container",
   component: Container,
-  subcomponent: ContainerContent,
   parameters: {
     layout: "fullscreen",
     badges: [BADGE.STABLE],
@@ -138,9 +140,25 @@ const meta: Meta<typeof Container> = {
     spacingTop: "lg",
     align: "start",
     justify: "center",
-    children: <ContainerContent>Test</ContainerContent>,
+    children: (
+      <ContainerContent>
+        <Paragraph align="center" className="p-2" font="mono" size="sm">
+          Container component is only to be used in conjunction with
+          ContainerContent.
+        </Paragraph>
+      </ContainerContent>
+    ),
     asChild: false,
   },
+  decorators: [
+    (storyFn) => {
+      const emit = useChannel({});
+      emit(HIGHLIGHT, {
+        elements: [".container", ".container__content"],
+      });
+      return storyFn();
+    },
+  ],
 };
 
 export default meta;
@@ -151,3 +169,8 @@ const Template: StoryFn<typeof Container> = (args: any) => (
 
 export const Default: StoryFn<typeof Container> = Template.bind({});
 Default.args = {};
+
+export const SpacingTopBottom: StoryFn<typeof Container> = Template.bind({});
+SpacingTopBottom.args = {
+  spacing: "xl",
+};

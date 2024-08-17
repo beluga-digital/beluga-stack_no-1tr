@@ -6,6 +6,7 @@ import { cn } from "@repo/utils";
 
 const containerVariants = cva(
   `
+        container
         w-full
         max-w-[100vw]
         grid
@@ -111,8 +112,8 @@ const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
             spacingBottom: !spacing && spacingBottom,
             align,
             justify,
-            className,
-          })
+          }),
+          className
         )}
         ref={ref}
         {...props}
@@ -124,7 +125,7 @@ const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
 );
 Container.displayName = "Container";
 
-const containerContentVariants = cva("w-full min-w-0", {
+const containerContentVariants = cva("container__content w-full min-w-0", {
   variants: {
     area: {
       false: "",
@@ -195,8 +196,8 @@ const ContainerContent = React.forwardRef<
             areaStart: !area && areaStart,
             areaEnd: !area && areaEnd,
             maxWidth,
-            className,
-          })
+          }),
+          className
         )}
         ref={ref}
         {...props}

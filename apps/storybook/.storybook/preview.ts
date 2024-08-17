@@ -4,7 +4,7 @@ import "@fontsource/geist-mono/700.css";
 import "@fontsource/krona-one";
 import "../../../packages/ui/dist/styles/globals.css";
 import "../src/globals.css";
-
+import React from "react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import { BADGE, BadgesConfig } from "@geometricpanda/storybook-addon-badges";
 
@@ -26,9 +26,9 @@ const preview = {
     backgrounds: {
       disable: true,
       grid: {
-        cellSize: 20,
+        cellSize: 8,
         opacity: 0.5,
-        cellAmount: 5,
+        cellAmount: 4,
         offsetX: 16, // Default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
         offsetY: 16, // Default is 0 if story has 'fullscreen' layout, 16 if layout is 'padded'
       },
