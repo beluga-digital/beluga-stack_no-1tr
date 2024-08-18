@@ -1,0 +1,77 @@
+import { Meta, Title, Typeset, Markdown } from "@storybook/blocks";
+import sharedConfig from "@repo/tailwind-config";
+import resolveConfig from "tailwindcss/resolveConfig";
+export const twConfig = resolveConfig(sharedConfig);
+
+export function FontFamilies() {
+  const families = twConfig.theme.fontFamily;
+  let output = "";
+  Object.entries(families).map(([key, value]) => {
+    output += `<li>**${key}**: ${value.join(", ")}</li>`;
+  });
+  return <Markdown>{output}</Markdown>;
+}
+
+export function FontWeights() {
+  const weights = twConfig.theme.fontWeight;
+  let output = "";
+  Object.entries(weights).map(([key, value]) => {
+    output += `<li>**${key}**: ${value}</li>`;
+  });
+  return <Markdown>{output}</Markdown>;
+}
+
+export function FontSizes() {
+  const sizes = twConfig.theme.fontSize;
+  let output = [];
+  Object.entries(sizes).map(([key, value]) => {
+    output.push(value[0])
+  });
+  return output
+}
+
+export function FontSizeKeys() {
+  const sizes = twConfig.theme.fontSize;
+  let output = "";
+  Object.entries(sizes).map(([key, value]) => {
+    output += `<li>**${key}**: ${value[0]} (line-height: ${value[1].lineHeight})</li>`;
+  });
+  return <Markdown>{output}</Markdown>;
+}
+
+<Meta title="Design System/Typography" />
+
+<Title>Typography</Title>
+
+## fonts
+
+<FontFamilies />
+
+<div className="callout--message">
+Fonts are defined in the tailwind config of the `@repo/tailwind-config` package.
+</div>
+
+## weights
+
+<FontWeights />
+<div className="callout--warning">
+Please note that when using components, separate attributes may be used for
+  the font weight and may differ from these here. Therefore, please refer to the
+  documentation of the respective component.
+  </div>
+<div className="callout--message">
+Fonts weights are defined in the tailwind config of the `@repo/tailwind-config` package.
+</div>
+
+## sizes
+<FontSizeKeys/>
+<Typeset
+  fontSizes={FontSizes()}
+  fontWeight={twConfig.theme.fontWeight.semibold}
+  sampleText={"The quick, brown fox jumps over a lazy dog."}
+  fontFamily={twConfig.theme.fontFamily.sans}
+/>
+<div className="callout--warning">
+Note: This list is based on the font sizes from the tailwind config in the `@repo/tailwind-config` package.
+Components such as Heading and Paragraph have their own font size definitions with different mappings to the corresponding tailwind utility classes.
+  </div>

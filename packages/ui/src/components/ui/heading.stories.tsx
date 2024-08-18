@@ -2,6 +2,13 @@ import type { Meta, StoryFn } from "@storybook/react";
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { Heading } from "./heading";
 
+/**
+ * The Heading component is a versatile text element for creating headings in a React application.
+ * It supports different heading levels (h1-h6) and various font sizes, allowing for flexible typography.
+ * This component is designed to maintain consistent styling across the application while providing
+ * customization options for different use cases.
+ */
+
 const meta: Meta<typeof Heading> = {
   title: "UI/01_Text/Heading",
   component: Heading,
@@ -23,6 +30,10 @@ const meta: Meta<typeof Heading> = {
         },
       },
       options: [1, 2, 3, 4, 5, 6],
+      table: {
+        defaultValue: { summary: 2 },
+        type: { summary: "number" },
+      },
     },
     size: {
       description: "The font-size for this heading.",
@@ -59,6 +70,10 @@ const meta: Meta<typeof Heading> = {
         "5xl",
         "6xl",
       ],
+      table: {
+        defaultValue: { summary: "lg" },
+        type: { summary: "string" },
+      },
     },
     align: {
       description: "Determined the alignment of the text.",
@@ -66,6 +81,10 @@ const meta: Meta<typeof Heading> = {
         type: "select",
       },
       options: ["left", "center", "right", "justify"],
+      table: {
+        defaultValue: { summary: "left" },
+        type: { summary: "string" },
+      },
     },
     weight: {
       description:
@@ -74,6 +93,10 @@ const meta: Meta<typeof Heading> = {
         type: "select",
       },
       options: ["light", "normal", "medium", "semibold", "bold"],
+      table: {
+        defaultValue: { summary: "semibold" },
+        type: { summary: "string" },
+      },
     },
     font: {
       description: "Define a font family.",
@@ -81,17 +104,33 @@ const meta: Meta<typeof Heading> = {
         type: "inline-radio",
       },
       options: ["sans", "serif", "mono"],
+      table: {
+        defaultValue: { summary: "mono" },
+        type: { summary: "string" },
+      },
     },
     children: {
       description: "Set the content of this component.",
+      table: {
+        type: { summary: "any" },
+      },
     },
     className: {
       description: "Set more css classes for this component.",
+      table: {
+        defaultValue: { summary: "" },
+        type: { summary: "string" },
+      },
     },
     asChild: {
       control: "boolean",
       description:
         "asChild is a good way to compile the behavior of several primitives and pass on arguments.",
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: "boolean" },
+        readonly: true,
+      },
     },
   },
   args: {
@@ -112,6 +151,9 @@ const Template: StoryFn<typeof Heading> = (args: any) => <Heading {...args} />;
 
 export const Default: StoryFn<typeof Heading> = Template.bind({});
 Default.args = {};
+Default.parameters = {
+  description: "Test Beschreibung",
+};
 
 export const Page: StoryFn<typeof Heading> = Template.bind({});
 Page.args = {

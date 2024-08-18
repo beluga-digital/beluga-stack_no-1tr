@@ -2,11 +2,21 @@ import type { Meta, StoryFn } from "@storybook/react";
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { Paragraph } from "./paragraph";
 
+/**
+ * The Paragraph component is a versatile text element for creating paragraphs in a React application.
+ * It supports different font sizes and text alignments, allowing for flexible typography.
+ * This component is designed to maintain consistent styling throughout the application and
+ * offers customization options for different use cases.
+ */
+
 const meta: Meta<typeof Paragraph> = {
   title: "UI/01_Text/Paragraph",
   component: Paragraph,
   parameters: {
     badges: [BADGE.STABLE],
+    docs: {
+      description: "BEschreibung qbf eqwfqefeqfefqe",
+    },
   },
   argTypes: {
     size: {
