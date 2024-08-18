@@ -24,16 +24,6 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-themes"),
     getAbsolutePath("@geometricpanda/storybook-addon-badges"),
     getAbsolutePath("@storybook/addon-storysource"),
-    {
-      name: getAbsolutePath("@storybook/addon-docs"),
-      options: {
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
-        },
-      },
-    },
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
