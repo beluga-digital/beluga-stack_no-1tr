@@ -6,7 +6,7 @@ import "../../../packages/ui/dist/styles/globals.css";
 import "../src/globals.css";
 import React from "react";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
-import { BADGE, BadgesConfig } from "@geometricpanda/storybook-addon-badges";
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
 export const decorators = [
   withThemeByDataAttribute({
@@ -37,6 +37,13 @@ const preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/,
+      },
+    },
+    docs: {
+      page: DocumentationTemplate,
+      toc: {
+        headingSelector: "h2, h3",
+        title: "Table of contents",
       },
     },
   },
