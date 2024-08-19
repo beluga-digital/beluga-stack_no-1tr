@@ -6,7 +6,7 @@ import { Container, ContainerContent } from "./container";
 import { Paragraph } from "./paragraph";
 
 const meta: Meta<typeof Container> = {
-  title: "UI/04_Layout/Container",
+  title: "UI/Layout/Container",
   component: Container,
   parameters: {
     layout: "fullscreen",

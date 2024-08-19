@@ -10,7 +10,7 @@ import { Heading } from "./heading";
  */
 
 const meta: Meta<typeof Heading> = {
-  title: "UI/01_Text/Heading",
+  title: "UI/Text/Heading",
   component: Heading,
   parameters: {
     badges: [BADGE.STABLE],
@@ -161,6 +161,14 @@ Page.args = {
   align: "center",
   className: "text-primary dark:text-primary",
 };
+Page.parameters = {
+  docs: {
+    description: {
+      story:
+        "This variant shows a centered heading with a larger font size that can be used as a page heading. It uses custom color classes for light and dark themes.",
+    },
+  },
+};
 
 export const Hero: StoryFn<typeof Heading> = Template.bind({});
 Hero.args = {
@@ -172,6 +180,12 @@ Hero.args = {
 Hero.parameters = {
   layout: "fullscreen",
   badges: [BADGE.EXPERIMENTAL],
+  docs: {
+    description: {
+      story:
+        "This variant is designed for hero sections, featuring a larger font size and a serif font for a more elegant look. It also includes custom color classes for light and dark themes.",
+    },
+  },
 };
 Hero.decorators = [
   (Hero) => (
@@ -184,4 +198,12 @@ Hero.decorators = [
 export const Card: StoryFn<typeof Heading> = Template.bind({});
 Card.args = {
   size: "base",
+};
+Card.parameters = {
+  docs: {
+    description: {
+      story:
+        "This variant is designed for card sections and features a medium font size.",
+    },
+  },
 };
