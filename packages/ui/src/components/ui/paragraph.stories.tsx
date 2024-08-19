@@ -10,13 +10,10 @@ import { Paragraph } from "./paragraph";
  */
 
 const meta: Meta<typeof Paragraph> = {
-  title: "UI/01_Text/Paragraph",
+  title: "UI/Text/Paragraph",
   component: Paragraph,
   parameters: {
     badges: [BADGE.STABLE],
-    docs: {
-      description: "BEschreibung qbf eqwfqefeqfefqe",
-    },
   },
   argTypes: {
     size: {
