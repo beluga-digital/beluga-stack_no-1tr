@@ -32,10 +32,16 @@ configureSort({
       media: {
         "**": { default: null },
       },
-      interactive: {
+      interaction: {
         button: {
           default: null,
+          secondary: null,
+          ghost: null,
+          destructive: null,
         },
+      },
+      "presentation&data": {
+        card: null,
       },
     },
     "**": { default: null },

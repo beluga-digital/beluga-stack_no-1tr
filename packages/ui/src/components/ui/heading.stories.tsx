@@ -140,7 +140,6 @@ const meta: Meta<typeof Heading> = {
     weight: "semibold",
     font: "mono",
     children: "The quick, brown fox jumps over a lazy dog.",
-    className: "",
     asChild: false,
   },
 };

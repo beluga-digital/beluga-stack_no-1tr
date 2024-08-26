@@ -10,18 +10,12 @@ const buttonVariants = cva(
       variant: {
         primary:
           "bg-primary-600 text-white hover:bg-primary-600/90 dark:bg-primary dark:text-slate-950 dark:hover:bg-primary/90",
-        primaryGradient:
-          "bg-gradient-to-br from-primary-400 to-primary-700 text-white hover:from-primary-500 hover:to-primary-700 dark:from-primary-300 dark:to-primary-600 dark:text-slate-950 dark:hover:from-primary-400 dark:hover:to-primary-600",
-        primaryOutline:
-          "border border-primary-600 bg-transparent text-primary-600 hover:bg-primary-100/50 dark:border-primary dark:text-primary dark:hover:bg-primary-950/50",
-        default:
-          "bg-slate-900 text-slate-50 hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90",
+        secondary:
+          "bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
         destructive:
           "bg-red-500 text-slate-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90",
         outline:
           "border border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50",
-        secondary:
-          "bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
         ghost:
           "hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50",
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
