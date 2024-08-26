@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body,
+  .docs-story {
+    @apply bg-white dark:bg-slate-950 antialiased min-w-full min-h-full;
+  }
+}
+
+small {
+  @apply text-slate-500 dark:text-slate-500;
+}
+
+.sbdocs-content {
+  @apply font-sans;
+}
+
+.callout--message > p,
+.callout--message > * {
+  @apply bg-slate-100 dark:bg-slate-900 text-slate-500 border-l-4 border-slate-500 p-2 rounded font-semibold;
+}
+.callout--info > p,
+.callout--info > * {
+  @apply bg-blue-100 dark:bg-blue-900 text-blue-500 border-l-4 border-blue-500 p-2 rounded font-semibold;
+}
+.callout--warning > p,
+.callout--warning > * {
+  @apply bg-amber-100 dark:bg-amber-900 text-amber-500 border-l-4 border-amber-500 p-2 rounded font-semibold;
+}
+.callout--error > p,
+.callout--error > * {
+  @apply bg-red-100 dark:bg-red-900 text-red-500 border-l-4 border-red-500 p-2 rounded font-semibold;
+}
+.callout--success > p,
+.callout--success > * {
+  @apply bg-green-100 dark:bg-green-900 text-green-500 border-l-4 border-green-500 p-2 rounded font-semibold;
+}

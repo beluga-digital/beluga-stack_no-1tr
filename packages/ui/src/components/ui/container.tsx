@@ -6,6 +6,7 @@ import { cn } from "@repo/utils";
 
 const containerVariants = cva(
   `
+        container
         w-full
         max-w-[100vw]
         grid
@@ -21,6 +22,7 @@ const containerVariants = cva(
   {
     variants: {
       spacing: {
+        false: "",
         none: "py-0",
         xs: "py-4",
         sm: "py-8",
@@ -30,9 +32,9 @@ const containerVariants = cva(
         "2xl": "py-48 lg:py-64",
         "3xl": "py-64 lg:py-80",
         "4xl": "py-80 lg:py-96",
-        false: "",
       },
       spacingTop: {
+        false: "",
         none: "pt-0",
         xs: "pt-4",
         sm: "pt-8",
@@ -42,9 +44,9 @@ const containerVariants = cva(
         "2xl": "pt-48 lg:pt-64",
         "3xl": "pt-64 lg:pt-80",
         "4xl": "pt-80 lg:pt-96",
-        false: "",
       },
       spacingBottom: {
+        false: "",
         none: "pb-0",
         xs: "ppb-4",
         sm: "pb-8",
@@ -54,7 +56,6 @@ const containerVariants = cva(
         "2xl": "pb-48 lg:pb-64",
         "3xl": "pb-64 lg:pb-80",
         "4xl": "pb-80 lg:pb-96",
-        false: "",
       },
       align: {
         start: "items-start",
@@ -111,8 +112,8 @@ const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
             spacingBottom: !spacing && spacingBottom,
             align,
             justify,
-            className,
-          })
+          }),
+          className
         )}
         ref={ref}
         {...props}
@@ -124,27 +125,28 @@ const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
 );
 Container.displayName = "Container";
 
-const containerContentVariants = cva("w-full min-w-0", {
+const containerContentVariants = cva("container__content w-full min-w-0", {
   variants: {
     area: {
+      false: "",
       small: "col-[small] max-w-screen-lg",
       large: "col-[large] max-w-screen-2xl",
       page: "col-[page] max-w-full",
-      false: "",
     },
     areaStart: {
+      false: "",
       small: "col-start-[small] max-w-screen-lg",
       large: "col-start-[large] max-w-screen-2xl",
       page: "col-start-[page] max-w-full",
-      false: "",
     },
     areaEnd: {
+      false: "",
       small: "col-end-[small] max-w-screen-lg",
       large: "col-end-[large] max-w-screen-2xl",
       page: "col-end-[page] max-w-full",
-      false: "",
     },
     maxWidth: {
+      false: "",
       prose: "max-w-prose",
       sm: "max-w-screen-sm",
       md: "max-w-screen-md",
@@ -152,7 +154,6 @@ const containerContentVariants = cva("w-full min-w-0", {
       xl: "max-w-screen-xl",
       "2xl": "max-w-screen-2xl",
       full: "max-w-full",
-      false: "",
     },
   },
   defaultVariants: {
@@ -195,8 +196,8 @@ const ContainerContent = React.forwardRef<
             areaStart: !area && areaStart,
             areaEnd: !area && areaEnd,
             maxWidth,
-            className,
-          })
+          }),
+          className
         )}
         ref={ref}
         {...props}
