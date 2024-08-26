@@ -65,12 +65,13 @@ Fonts weights are defined in the tailwind config of the `@repo/tailwind-config` 
 
 ## sizes
 <FontSizeKeys/>
-<Typeset
+{/* TODO: fix width of typeset on small displays */}
+{/* <Typeset
   fontSizes={FontSizes()}
   fontWeight={twConfig.theme.fontWeight.semibold}
   sampleText={"The quick, brown fox jumps over a lazy dog."}
   fontFamily={twConfig.theme.fontFamily.sans}
-/>
+/> */}
 <div className="callout--warning">
 Note: This list is based on the font sizes from the tailwind config in the `@repo/tailwind-config` package.
 Components such as Heading and Paragraph have their own font size definitions with different mappings to the corresponding tailwind utility classes.
