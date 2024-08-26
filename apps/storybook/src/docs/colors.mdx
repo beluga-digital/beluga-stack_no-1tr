@@ -1,0 +1,179 @@
+import { Meta, Title, ColorPalette, ColorItem } from "@storybook/blocks";
+import sharedConfig from "@repo/tailwind-config";
+import resolveConfig from "tailwindcss/resolveConfig";
+export const twConfig = resolveConfig(sharedConfig);
+
+export function BrandColors() {
+  return (
+    <ColorPalette>
+      <ColorItem
+        title="Primary"
+        subtitle="theme.colors.primary"
+        colors={twConfig.theme.colors.primary}
+      />
+    </ColorPalette>
+  );
+}
+
+export function TailwindGrayscale() {
+    return (
+    	<ColorPalette>
+    		<ColorItem
+    			title="Slate"
+    			subtitle="theme.colors.slate"
+    			colors={twConfig.theme.colors.slate}
+    		/>
+    		<ColorItem
+    			title="Gray"
+    			subtitle="theme.colors.gray"
+    			colors={twConfig.theme.colors.gray}
+    		/>
+    		<ColorItem
+    			title="Zinc"
+    			subtitle="theme.colors.zinc"
+    			colors={twConfig.theme.colors.zinc}
+    		/>
+    		<ColorItem
+    			title="Neutral"
+    			subtitle="theme.colors.neutral"
+    			colors={twConfig.theme.colors.neutral}
+    		/>
+    		<ColorItem
+    			title="Stone"
+    			subtitle="theme.colors.stone"
+    			colors={twConfig.theme.colors.stone}
+    		/>
+    		<ColorItem
+    			title="White"
+    			subtitle="theme.colors.white"
+    			colors={{ white: twConfig.theme.colors.white }}
+    		/>
+    		<ColorItem
+    			title="Black"
+    			subtitle="theme.colors.black"
+    			colors={{ black: twConfig.theme.colors.black }}
+    		/>
+    		<ColorItem
+    			title="Transparent"
+    			subtitle="theme.colors.transparent"
+    			colors={{ transparent: twConfig.theme.colors.transparent }}
+    		/>
+    		<ColorItem
+    			title="Inherit"
+    			subtitle="theme.colors.inherit"
+    			colors={{ inherit: twConfig.theme.colors.inherit }}
+    		/>
+    	</ColorPalette>
+    );
+
+}
+
+export function TailwindColors() {
+  return (
+    <ColorPalette>
+      <ColorItem
+        title="Red"
+        subtitle="theme.colors.red"
+        colors={twConfig.theme.colors.red}
+      />
+      <ColorItem
+        title="Orange"
+        subtitle="theme.colors.orange"
+        colors={twConfig.theme.colors.orange}
+      />
+      <ColorItem
+        title="Amber"
+        subtitle="theme.colors.amber"
+        colors={twConfig.theme.colors.amber}
+      />
+      <ColorItem
+        title="Yellow"
+        subtitle="theme.colors.yellow"
+        colors={twConfig.theme.colors.yellow}
+      />
+      <ColorItem
+        title="Lime"
+        subtitle="theme.colors.lime"
+        colors={twConfig.theme.colors.lime}
+      />
+      <ColorItem
+        title="Green"
+        subtitle="theme.colors.green"
+        colors={twConfig.theme.colors.green}
+      />
+      <ColorItem
+        title="Emerald"
+        subtitle="theme.colors.emerald"
+        colors={twConfig.theme.colors.emerald}
+      />
+      <ColorItem
+        title="Teal"
+        subtitle="theme.colors.teal"
+        colors={twConfig.theme.colors.teal}
+      />
+      <ColorItem
+        title="Cyan"
+        subtitle="theme.colors.cyan"
+        colors={twConfig.theme.colors.cyan}
+      />
+      <ColorItem
+        title="Sky"
+        subtitle="theme.colors.sky"
+        colors={twConfig.theme.colors.sky}
+      />
+      <ColorItem
+        title="Blue"
+        subtitle="theme.colors.blue"
+        colors={twConfig.theme.colors.blue}
+      />
+      <ColorItem
+        title="Indigo"
+        subtitle="theme.colors.indigo"
+        colors={twConfig.theme.colors.indigo}
+      />
+      <ColorItem
+        title="Violet"
+        subtitle="theme.colors.violet"
+        colors={twConfig.theme.colors.violet}
+      />
+      <ColorItem
+        title="Purple"
+        subtitle="theme.colors.purple"
+        colors={twConfig.theme.colors.purple}
+      />
+      <ColorItem
+        title="Fuchsia"
+        subtitle="theme.colors.fuchsia"
+        colors={twConfig.theme.colors.fuchsia}
+      />
+      <ColorItem
+        title="Pink"
+        subtitle="theme.colors.pink"
+        colors={twConfig.theme.colors.pink}
+      />
+      <ColorItem
+        title="Rose"
+        subtitle="theme.colors.rose"
+        colors={twConfig.theme.colors.rose}
+      />
+    </ColorPalette>
+  );
+}
+
+<Meta title="Design System/Colors" />
+
+<Title>Colors</Title>
+
+## brand
+
+<BrandColors />
+
+## tailwind base colors
+
+### grayscale
+
+<TailwindGrayscale />
+
+### colors
+
+<TailwindColors />

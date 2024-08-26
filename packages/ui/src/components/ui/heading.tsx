@@ -4,7 +4,7 @@ import { cva } from "class-variance-authority";
 import * as React from "react";
 import { cn } from "@repo/utils";
 
-const headingVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
+const headingVariants = cva("text-slate-700 dark:text-slate-50", {
   variants: {
     size: {
       "4xs": "text-2xs md:text-xs leading-tight md:leading-tight",
@@ -27,6 +27,13 @@ const headingVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
       right: "text-right",
       justify: "text-justify",
     },
+    weight: {
+      light: "font-light",
+      normal: "font-normal",
+      medium: "font-medium",
+      semibold: "font-semibold",
+      bold: "font-bold",
+    },
     font: {
       sans: "font-sans",
       serif: "font-serif",
@@ -34,8 +41,9 @@ const headingVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
     },
   },
   defaultVariants: {
-    size: "base",
+    size: "lg",
     align: "left",
+    weight: "semibold",
     font: "mono",
   },
 });
@@ -48,12 +56,18 @@ export interface HeadingProps
 }
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ className, size, align, font, level, asChild = false, ...props }, ref) => {
+  (
+    { className, size, align, weight, font, level, asChild = false, ...props },
+    ref
+  ) => {
     const Comp = asChild ? Slot : `h${level}`;
 
     return (
       <Comp
-        className={cn(headingVariants({ size, align, font, className }))}
+        className={cn(
+          headingVariants({ size, align, weight, font }),
+          className
+        )}
         ref={ref}
         {...props}
       >

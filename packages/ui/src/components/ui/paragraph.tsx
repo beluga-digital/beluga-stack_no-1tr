@@ -4,7 +4,7 @@ import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 import * as React from "react";
 
-const paragraphVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
+const paragraphVariants = cva("text-slate-700 dark:text-slate-50", {
   variants: {
     size: {
       "3xs": "text-2xs",
@@ -26,6 +26,13 @@ const paragraphVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
       right: "text-right",
       justify: "text-justify",
     },
+    weight: {
+      light: "font-light",
+      normal: "font-normal",
+      medium: "font-medium",
+      semibold: "font-semibold",
+      bold: "font-bold",
+    },
     font: {
       sans: "font-sans",
       serif: "font-serif",
@@ -35,6 +42,7 @@ const paragraphVariants = cva("font-normal text-slate-700 dark:text-slate-50", {
   defaultVariants: {
     size: "base",
     align: "left",
+    weight: "normal",
     font: "sans",
   },
 });
@@ -46,12 +54,18 @@ export interface ParagraphProps
 }
 
 const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
-  ({ className, size, align, font, asChild = false, ...props }, ref) => {
+  (
+    { className, size, align, weight, font, asChild = false, ...props },
+    ref
+  ) => {
     const Comp = asChild ? Slot : "p";
 
     return (
       <Comp
-        className={cn(paragraphVariants({ size, align, font, className }))}
+        className={cn(
+          paragraphVariants({ size, align, weight, font }),
+          className
+        )}
         ref={ref}
         {...props}
       >
